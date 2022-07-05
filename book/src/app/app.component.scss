@@ -1,0 +1,32 @@
+.main_wrap {
+  height: 100vh;
+  margin: 0px auto;
+  background-color: #303030;
+
+  .header {
+    a {
+      text-decoration: none;
+      color: aliceblue;
+
+      &:active {
+        color: tomato;
+      }
+    }
+  }
+
+  main {
+    margin: 0px auto;
+    max-width: 1200px;
+  }
+
+  span {
+    margin-left: 40px;
+    font-size: 25px;
+    color: #303030;
+  }
+
+  .header_select {
+    margin-top: 20px;
+  }
+}
+

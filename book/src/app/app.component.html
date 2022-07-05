@@ -1,0 +1,43 @@
+<div class="main_wrap">
+  <p class="header">
+    <mat-toolbar color="primary">
+      <mat-form-field 
+        appearance="fill"
+        class="header_select"
+      >
+        <mat-label>Содержание</mat-label>
+        <mat-select #mode value="side">
+          <mat-option 
+            value="push"
+            [routerLink]="['/']"
+          >
+          0.Обложка</mat-option>
+          <mat-option 
+            value="side"
+            [routerLink]="['/intro']"
+          >
+          1.Знакомство с алгоритмами</mat-option>
+          <mat-option 
+            value="over" 
+            [routerLink]="['/selection']"
+          >2. Сортировка выбором</mat-option>
+          <mat-option value="push">Push</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <!-- <button 
+        mat-mini-fab 
+        color="primary" 
+        class="example-icon" 
+        aria-label="Example icon-button with menu icon"
+      >
+        <mat-icon>menu</mat-icon>
+      </button> -->
+      <span>GROKKING ALGORITHMS</span>
+      <span class="example-spacer"></span>
+    </mat-toolbar>
+  </p>
+
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+</div>
