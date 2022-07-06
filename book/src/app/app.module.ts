@@ -13,13 +13,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
+import { MatrixComponent } from './components/shared/matrix/matrix.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IntroductionComponent,
     SelectionSortComponent,
-    HomeComponent
+    HomeComponent,
+    MatrixComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,6 +32,7 @@ import { MatSelectModule } from '@angular/material/select';
     MatButtonModule,
     MatFormFieldModule,
     MatSelectModule,
+    MatSidenavModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
