@@ -1,1 +1,11 @@
-<p>matrix works!</p>
+<div class="matrix-wrap">
+  <div 
+    class="matrix_row"
+    *ngFor="let row of matrix"
+  >
+    <div
+      *ngFor="let cell of row" 
+      class="matrix_col"
+    ></div>
+  </div>
+</div>

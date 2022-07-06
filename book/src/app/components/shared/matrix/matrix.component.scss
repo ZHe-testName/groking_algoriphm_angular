@@ -1,0 +1,14 @@
+.matrix-wrap {
+  display: flex;
+  flex-direction: column;
+
+  .matrix_row {
+    display: flex;
+    
+    .matrix_col {
+      width: 50px;
+      height: 50px;
+      border: 1px solid grey;
+    }
+  }
+}

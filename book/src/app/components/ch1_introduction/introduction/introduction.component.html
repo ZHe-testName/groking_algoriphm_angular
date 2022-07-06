@@ -115,6 +115,54 @@
     </mat-drawer-container>
   </div>
 
+  <div class="stupid">
+    <h2>Простой(тупой) поиск</h2>
+
+    <p>
+      Это самый простой и очевидный способ найти, допустим загаданое число из списка доступных.
+      Идея заключается в том чтобы по очереди, один за другим, начиная с первого перебирать все эллементы списка пока не угадаем нужный.
+    </p>
+
+    <p>
+      Скорость Тупого Поиска составляет <strong>O(n)</strong>.
+    </p>
+
+    <p>
+      Так как в самом худшем случае нужно будет пройтись по всем эллементам списка
+    </p>
+
+    <div class="stupid-animation">
+      <mat-drawer-container 
+        class="stupid-container"
+        [ngStyle]="{'height': isOpenBinarySearch ? '250px' : '110px'}"
+      >
+        <mat-drawer-content class="stupid-controls">
+          <button 
+            mat-raised-button 
+            color="primary"
+            (click)="toggleDrawer(true, 'stupid')"
+          >
+          Показать</button>
+
+          <button 
+            mat-raised-button 
+            color="primary"
+            (click)="toggleDrawer(false, 'stupid')"
+          >
+          Скрыть</button>
+        </mat-drawer-content>
+
+        <mat-drawer 
+          #stupid_drawer
+          position="end"
+          class="o-large-description"
+        >
+          <app-matrix [cols]="4" [rows]="2"></app-matrix>
+        </mat-drawer>
+      </mat-drawer-container>
+    </div>
+  </div>
+
   <div>
     <h2>Бинарный Поиск</h2>
 
@@ -170,34 +218,54 @@
             position="end"
             class="o-large-description"
           >
-
+            <app-matrix [cols]="7" [rows]="3"></app-matrix>
           </mat-drawer>
         </mat-drawer-container>
       </div>
 
       <div class="binary">
-        <label for="">
-          Длинна массива :
-          <input type="number" id="array_length">
-        </label>
-        
-        <label for="">
-          Искомое число :
-          <input type="number" id="search_number">
-        </label>
+        <p>
+          Протестировать работу алгоритма можно здесь
+        </p>
 
-        <br/>
+        <mat-form-field
+          class="binary_input" 
+          appearance="fill"
+        >
+          <mat-label>Количество элементов</mat-label>
+          <input 
+            matInput 
+            [(ngModel)]="arrLength"
+            >
+        </mat-form-field>
 
-        <button class="binary_find">Искать</button>
+        <mat-form-field 
+          class="binary_input" 
+          appearance="fill"
+        >
+          <mat-label>Искомое число</mat-label>
+          <input 
+            matInput 
+            [(ngModel)]="searchNumber"
+          >
+        </mat-form-field>
+
+        <button 
+          mat-stroked-button
+          color="primary"
+          [disabled]="!arrLength || !searchNumber"
+          (click)="runBinaryAlgorithm()"
+        >
+        Искать</button>
         
         <p>
           Количество операций: 
-          <span class="attempt_amount">0</span>
+          <span class="attempt_amount">{{attemptAmount}}</span>
         </p>
 
         <p>
           Индекс искомого эллемента: 
-          <span class="search_index">0</span>
+          <span class="search_index">{{searchIndex}}</span>
         </p>
       </div>
   </div>

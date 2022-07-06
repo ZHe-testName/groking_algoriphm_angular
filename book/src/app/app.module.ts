@@ -14,6 +14,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatrixComponent } from './components/shared/matrix/matrix.component';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { MatrixComponent } from './components/shared/matrix/matrix.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
@@ -33,6 +37,7 @@ import { MatrixComponent } from './components/shared/matrix/matrix.component';
     MatFormFieldModule,
     MatSelectModule,
     MatSidenavModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
