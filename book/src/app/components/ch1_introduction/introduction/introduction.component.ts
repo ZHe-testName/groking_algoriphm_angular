@@ -1,3 +1,4 @@
+import { MatrixCell } from './../../../interfaces/matrix_interface';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { HelperService } from 'src/app/service/helper.service';

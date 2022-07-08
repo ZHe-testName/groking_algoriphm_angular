@@ -134,7 +134,7 @@
     <div class="stupid-animation">
       <mat-drawer-container 
         class="stupid-container"
-        [ngStyle]="{'height': isOpenBinarySearch ? '250px' : '110px'}"
+        [ngStyle]="{'height': isOpenBinarySearch ? '250px' : '130px'}"
       >
         <mat-drawer-content class="stupid-controls">
           <button 
@@ -157,7 +157,12 @@
           position="end"
           class="o-large-description"
         >
-          <app-matrix [cols]="4" [rows]="2"></app-matrix>
+          <app-matrix 
+            [cols]="15" 
+            [rows]="1"
+            btnText="А нука покажи"
+            componentId="stupid"
+          ></app-matrix>
         </mat-drawer>
       </mat-drawer-container>
     </div>
@@ -218,7 +223,12 @@
             position="end"
             class="o-large-description"
           >
-            <app-matrix [cols]="7" [rows]="3"></app-matrix>
+            <app-matrix 
+              [cols]="7" 
+              [rows]="3"
+              btnText="А нука покажи"
+              componentId="binary"
+            ></app-matrix>
           </mat-drawer>
         </mat-drawer-container>
       </div>

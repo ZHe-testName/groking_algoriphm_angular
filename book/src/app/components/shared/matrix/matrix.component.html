@@ -6,6 +6,19 @@
     <div
       *ngFor="let cell of row" 
       class="matrix_col"
-    ></div>
+      [ngClass]="{'highlight': cell.highlighted, 'desired': cell.desired}"
+    >
+      {{cell.index}}
+    </div>
+  </div>
+
+  <div class="controls-wrap">
+    <button 
+      mat-stroked-button 
+      color="primary"
+      (click)="clickHandler()"
+    >
+      {{btnText}}
+    </button>
   </div>
 </div>
