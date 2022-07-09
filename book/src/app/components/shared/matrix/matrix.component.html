@@ -6,11 +6,15 @@
     <div
       *ngFor="let cell of row" 
       class="matrix_col"
-      [ngClass]="{'highlight': cell.highlighted, 'desired': cell.desired}"
+      [ngClass]="{'highlight': cell.highlighted, 'desired': cell.desired, 'inactive': cell.inactive}"
     >
       {{cell.index}}
     </div>
   </div>
+
+  <span>
+    {{textDesc}}
+  </span>
 
   <div class="controls-wrap">
     <button 

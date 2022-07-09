@@ -14,6 +14,7 @@ export class MatrixComponent implements OnInit {
   @Input() componentId: string = ''
 
   public matrix: Array<MatrixCell[]> = []
+  public textDesc: string = ''
 
   constructor(
     private matrixService: MatrixAnimationService,

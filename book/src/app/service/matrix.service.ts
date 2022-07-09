@@ -33,6 +33,51 @@ export class MatrixAnimationService {
   }
 
   binarySearchAnimation(matrix: Array<MatrixCell[]>) {
-    console.log('binary', matrix);
+    let row = matrix[0];
+
+    let index = Math.floor(row.length / 2);
+
+    row[5].desired = true;
+    setTimeout(() => {
+      row[index].highlighted = true;
+    }, 800);
+
+    setTimeout(() => {
+      row[index].highlighted = false;
+
+      row = row.map(i => {
+        if(i.index >= index) {
+          i.inactive = true;
+
+          return i;
+        };
+
+        return i;
+      });
+    }, 1600);
+
+    setTimeout(() => {
+      index = index / 2 - 1;
+
+      row[index].highlighted = true;
+    }, 2400);
+
+    setTimeout(() => {
+      row[index].highlighted = false;
+
+      row = row.map(i => {
+        if(i.index <= index) {
+          i.inactive = true;
+
+          return i;
+        };
+
+        return i;
+      });
+    }, 3200);
+
+    setTimeout(() => {
+      row[5].highlighted = true;
+    }, 4000);
   }
 };

@@ -24,10 +24,20 @@
     .desired {
       background-color: rgba(10, 218, 10, 0.384);
     }
+
+    .inactive {
+      filter: blur(3px);
+    }
   }
 
   .controls-wrap {
     margin-top: 15px;
     margin-left: 20px;
+  }
+
+  span {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 18px;
   }
 }

@@ -134,7 +134,7 @@
     <div class="stupid-animation">
       <mat-drawer-container 
         class="stupid-container"
-        [ngStyle]="{'height': isOpenBinarySearch ? '250px' : '130px'}"
+        [ngStyle]="{'height': isOpenStupid ? '235px' : '130px'}"
       >
         <mat-drawer-content class="stupid-controls">
           <button 
@@ -163,6 +163,18 @@
             btnText="А нука покажи"
             componentId="stupid"
           ></app-matrix>
+
+          <p>
+            Например мы будем искать число 12.
+          </p>
+
+          <p>
+            Тупой поиск предполагает поочередной перебор всех элементов пока не будет найден нужный.
+          </p>
+
+          <p>
+            Для этого понадобится выполнить 12 операций.
+          </p>
         </mat-drawer>
       </mat-drawer-container>
     </div>
@@ -224,9 +236,9 @@
             class="o-large-description"
           >
             <app-matrix 
-              [cols]="7" 
-              [rows]="3"
-              btnText="А нука покажи"
+              [cols]="17" 
+              [rows]="1"
+              btnText="И что тут у нас"
               componentId="binary"
             ></app-matrix>
           </mat-drawer>

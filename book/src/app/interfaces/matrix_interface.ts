@@ -3,4 +3,5 @@ export type MatrixCell = {
   highlighted?: boolean,
   desired?: boolean,
   deactivated?: boolean,
+  inactive?: boolean,
 };
