@@ -35,6 +35,8 @@ export class MatrixComponent implements OnInit {
           index,
           highlighted: false,
           desired: false,
+          inactive: false,
+          deactivated: false,
         });
 
         index++;

@@ -1,4 +1,5 @@
 import { Injectable } from "@angular/core";
+import { flatMap } from "rxjs";
 import { MatrixCell } from "../interfaces/matrix_interface";
 
 @Injectable({
@@ -34,6 +35,42 @@ export class MatrixAnimationService {
 
   binarySearchAnimation(matrix: Array<MatrixCell[]>) {
     let row = matrix[0];
+
+    
+
+    row.forEach((item: {[index: string]: any}, i)=> {
+      const keys = Object.keys(item);
+
+      keys.forEach(k => {
+        if(k == 'index') {
+          return;
+        };
+
+        if(k) {
+          item[k] = false;
+        };
+      });
+    // });
+      // item.index = i;
+      // item.highlighted = false;
+      // item.desired = false;
+      // item.deactivated = false;
+      // item.inactive = false;
+    });
+
+    // row = row.map(item => {
+    //   const keys = Object.keys(item);
+
+    //   keys.forEach(k => {
+    //     if(k == 'index') {
+    //       return;
+    //     };
+
+    //     if(k) {
+    //       item[k] = false;
+    //     };
+    //   });
+    // });
 
     let index = Math.floor(row.length / 2);
 

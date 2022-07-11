@@ -212,7 +212,7 @@
       <div class="binary-search-animation">
         <mat-drawer-container 
           class="binary-search-container"
-          [ngStyle]="{'height': isOpenBinarySearch ? '250px' : '110px'}"
+          [ngStyle]="{'height': isOpenBinarySearch ? '370px' : '110px'}"
         >
           <mat-drawer-content class="binary-search-controls">
             <button 
@@ -238,9 +238,37 @@
             <app-matrix 
               [cols]="17" 
               [rows]="1"
-              btnText="И что тут у нас"
+              btnText="Продемонстрируй"
               componentId="binary"
             ></app-matrix>
+
+            <p>
+              Например мы ищем число 5 в нашем списке.
+            </p>
+
+            <p>
+              Выбираем середину списка, тоесть 8-ку.
+            </p>
+
+            <p>
+              Это много, значит отбрасываем 8 и все что после нее.
+            </p>
+
+            <p>
+              Берем середину от оставшейся части. 3-ку например.
+            </p>
+
+            <p>
+              На этот раз уже меньше. Что ж уберам все от начала и до позиции 3.
+            </p>
+
+            <p>
+              Берем 5-ку в середине оставшегося списка и это правельный ответ!
+            </p>
+
+            <p>
+              Мы угадали число всего за 3 попытки!!!
+            </p>
           </mat-drawer>
         </mat-drawer-container>
       </div>
@@ -258,6 +286,7 @@
           <input 
             matInput 
             [(ngModel)]="arrLength"
+            maxlength="8"
             >
         </mat-form-field>
 
