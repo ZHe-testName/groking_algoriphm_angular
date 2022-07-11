@@ -38,7 +38,7 @@ export class MatrixAnimationService {
 
     
 
-    row.forEach((item: {[index: string]: any}, i)=> {
+    row.forEach((item: {[index: string]: any}) => {
       const keys = Object.keys(item);
 
       keys.forEach(k => {
@@ -50,27 +50,7 @@ export class MatrixAnimationService {
           item[k] = false;
         };
       });
-    // });
-      // item.index = i;
-      // item.highlighted = false;
-      // item.desired = false;
-      // item.deactivated = false;
-      // item.inactive = false;
     });
-
-    // row = row.map(item => {
-    //   const keys = Object.keys(item);
-
-    //   keys.forEach(k => {
-    //     if(k == 'index') {
-    //       return;
-    //     };
-
-    //     if(k) {
-    //       item[k] = false;
-    //     };
-    //   });
-    // });
 
     let index = Math.floor(row.length / 2);
 
